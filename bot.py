@@ -43,6 +43,7 @@ def send_dhcp_updates(devices, bot, chat_id):
         if len(devices.keys()) != 0:
             for mac in newdevices.keys():
                 if mac not in devices.keys():
+                    logger.info("New mac: " + mac + ", sending a message")
                     text = "New DHCP lease:"
                     for key in newdevices[mac].keys():
                         text += key + " " + newdevices[mac][key] + "\n"
