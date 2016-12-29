@@ -1,0 +1,9 @@
+[Unit]
+description=Telegram DHCP notfier
+
+[Service]
+ExecStart=/opt/telegram_dhcp_notifier/bot.py
+EnvFile=/opt/telegram_dhcp_notifier/vars
+
+[Install]
+WantedBy=multi-user.target
